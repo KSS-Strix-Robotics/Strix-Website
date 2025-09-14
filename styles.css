@@ -1,3 +1,7 @@
+.jade-link {
+  color: #933de3;
+  text-decoration: underline;
+}
 .bots-row {
   display: flex;
   gap: 32px;
