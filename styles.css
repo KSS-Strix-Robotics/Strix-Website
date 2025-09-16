@@ -24,12 +24,11 @@ html, body {
   padding: 0;
 }
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+
 }
 .main {
-  flex: 1;
+  transition: margin-left .5s;
+  padding: 20px;
 }
 
 
@@ -120,7 +119,7 @@ body {
 
 
 .footerContainer {
-    background-color: #181717;
+    background-color: #0a0a0a;
     padding: 20px;
     color: white;
     text-align: center;
@@ -148,6 +147,25 @@ body {
 
 }
 
+  .a {
+    background-color: #222;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    box-sizing: border-box;
+    padding: 40px 0; 
+}
+
+
+  .about {
+    background-color: #222;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    box-sizing: border-box;
+    padding: 40px 0; 
+}
+
 .about-img {
   max-width: 20%;
   max-height: 20%;
@@ -158,6 +176,7 @@ body {
 .about-title {
       color: #e2b427; 
       text-align: center;
+                 font-style: italic;
 }
   .about-text {
     font-size: 18px;
@@ -205,6 +224,7 @@ body {
 .mentors-title {
       color: #e2b427; 
       text-align: center;
+                 font-style: italic;
 }
 
 .contact-info {
@@ -227,14 +247,13 @@ body {
     max-width: 350px;
     border-radius: 5px;
     color: white;
-    margin: 30px auto;
-    padding: 20px;
+    margin: 25px ;
+    padding: 15px;
     box-sizing: border-box;
     position: static;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .mentors img {
@@ -344,8 +363,8 @@ body {
 }
 
 .video {
-  width: 560px;
-  height: 315px;
+  width: 660px;
+  height: 415px;
   max-width: 100%;
   border-radius: 10px;
   display: block;
@@ -353,3 +372,75 @@ body {
 }
 
 /* why you looking in here */
+
+
+
+.slideshow-container {
+  position: relative;
+  width: 250px;
+  height: 180px;
+  overflow: hidden;
+  margin-left: 30px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  pointer-events: none;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+.slide:first-child {
+  display: block;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  margin-top: -22px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
