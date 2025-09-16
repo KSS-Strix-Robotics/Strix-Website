@@ -177,12 +177,13 @@ body {
       color: #e2b427; 
       text-align: center;
                  font-style: italic;
+                 opacity: 1;
 }
   .about-text {
     font-size: 18px;
     padding-bottom: 30px;
-      overflow-wrap: break-word;
- 
+      overflow-wrap: break-word; 
+      opacity: 1;
   }
 
   .bots {
@@ -444,3 +445,16 @@ body {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+
+
+
+.about-img2 {
+    background-image: url(images/img1.png);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    box-sizing: border-box;
+    padding: 40px ; 
+
+}
+
