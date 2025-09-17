@@ -184,6 +184,8 @@ body {
     padding-bottom: 30px;
       overflow-wrap: break-word; 
       opacity: 1;
+      font-family: "UbuntuR", sans-serif;
+
   }
 
   .bots {
@@ -456,5 +458,56 @@ body {
     box-sizing: border-box;
     padding: 40px ; 
 
+}
+
+
+
+/* Font is from Google Fonts */
+.ubuntu-light {
+  font-family: "UbuntuL", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "UbuntuR", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "UbuntuM", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "UbuntuB", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "UbuntuLI", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "UbuntuRI", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "UbuntuMI", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "UbuntuBI", sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
