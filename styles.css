@@ -173,19 +173,84 @@ body {
   margin-right: 20px;
 
 }
+
 .about-title {
       color: #e2b427; 
       text-align: center;
                  font-style: italic;
                  opacity: 1;
 }
+
   .about-text {
     font-size: 18px;
     padding-bottom: 30px;
       overflow-wrap: break-word; 
       opacity: 1;
       font-family: "UbuntuR", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
 
+  .content-box {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 480px;      
+    padding: 28px 30px;
+    margin-top: 12px;
+    /* background: linear-gradient(145deg, #1d2330, #151a24); */
+    /* border: 1px solid rgba(255,255,255,0.08); */
+    border-radius: 18px;
+    box-shadow:
+      0 4px 10px -2px rgba(0,0,0,0.5),
+      0 0 0 1px rgba(255,255,255,0.04) inset;
+    color: #dde4ef;
+    font-size: 15px;
+    line-height: 1.55;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .content-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(255,255,255,0.10), transparent 60%),
+      radial-gradient(circle at 15% 85%, rgba(255,255,255,0.06), transparent 55%);
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+  
+  .content-box p {
+    margin: 0;
+    text-wrap: pretty;
+  }
+  
+  .disclaimer-badge {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    margin-bottom: 14px;
+    color: #cbd5e4;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 780px) {
+    .about-section {
+      flex-direction: column;
+    }
+    .about-text {
+      margin-left: 0 !important;
+    }
+    .content-box {
+      max-width: 94%;
+    }
   }
 
   .bots {
@@ -461,53 +526,16 @@ body {
 }
 
 
-
-/* Font is from Google Fonts */
-.ubuntu-light {
-  font-family: "UbuntuL", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+.my-box {
+  width: 300px;
+  height: 150px;
+  padding: 10px;
+  overflow: auto; 
 }
 
-.ubuntu-regular {
-  font-family: "UbuntuR", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
-.ubuntu-medium {
-  font-family: "UbuntuM", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+.my-box p {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  word-wrap: break-word;
 }
-
-.ubuntu-bold {
-  font-family: "UbuntuB", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.ubuntu-light-italic {
-  font-family: "UbuntuLI", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.ubuntu-regular-italic {
-  font-family: "UbuntuRI", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.ubuntu-medium-italic {
-  font-family: "UbuntuMI", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.ubuntu-bold-italic {
-  font-family: "UbuntuBI", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
