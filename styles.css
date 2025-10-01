@@ -33,7 +33,7 @@ body {
 
 
 body {
-    background-color: #181717;
+    background-color: #0d0d0d;
     color: white;
     margin: 0;
     padding: 0;
@@ -148,7 +148,7 @@ body {
 }
 
   .a {
-    background-color: #222;
+    background-color: #252525;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
@@ -158,7 +158,7 @@ body {
 
 
   .about {
-    background-color: #222;
+    background-color: #1a1a1a;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
@@ -179,6 +179,7 @@ body {
       text-align: center;
                  font-style: italic;
                  opacity: 1;
+                 margin: auto;
 }
 
   .about-text {
@@ -204,13 +205,15 @@ body {
     line-height: 1.55;
     position: relative;
     overflow: hidden;
+      font-family: "Nunito Sans", sans-serif;
+
   }
   
   .content-box::before {
     content: "";
     position: absolute;
     inset: 0;
-    background:
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
     pointer-events: none;
     mix-blend-mode: overlay;
   }
@@ -253,7 +256,7 @@ body {
     color: white;
     margin: 30px auto;
     padding: 20px;
-    background: rgba(20,20,20,0.7);
+    background: #2a2a2a;
     box-sizing: border-box;
     position: static;
     display: flex;
@@ -403,7 +406,7 @@ body {
            font-style: italic;
 }
   .FRC-text {
-  background-color: #222; 
+  background-color: #2a2a2a; 
   padding: 5px;
   border-radius: 10px;
   display: flex;
@@ -415,7 +418,7 @@ body {
   }
 
   .FRC {
-    background-color: #222;
+    background-color: #1a1a1a;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
@@ -511,11 +514,14 @@ body {
 
 
 .about-img2 {
-    background-image: url(images/img1.png);
+  background-color: #252525;
   display: flex;
   justify-content: center;
   padding: 40px 20px;
-
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  box-sizing: border-box;
 }
 
 
@@ -535,9 +541,12 @@ body {
 
 .about-section {
   display: flex;
-  align-items: center; /* This will vertically align the slideshow and text */
+  align-items: center; 
   justify-content: center;
   gap: 32px;
   flex-wrap: wrap;
   padding: 20px;
 }
+
+
+
