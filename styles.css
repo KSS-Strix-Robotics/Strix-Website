@@ -194,6 +194,15 @@ body {
       max-width: 480px;
   }
 
+  .about-robots {
+    color: #e2b427;
+    text-align: center;
+    font-style: italic;
+    font-size: 32px;
+    margin: 40px auto 20px auto;
+    padding: 0;
+  }
+
   .content-box {
     box-sizing: border-box;
     width: 100%;
