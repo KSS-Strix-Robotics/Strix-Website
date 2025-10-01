@@ -3,6 +3,7 @@ class Slideshow {
     this.container = container;
     this.slides = container.getElementsByClassName("slide");
     this.index = 0;
+    this.timer = null;
     this.showSlide(this.index);
 
     const prev = container.querySelector(".prev");
@@ -10,7 +11,10 @@ class Slideshow {
     if (prev) prev.addEventListener("click", () => this.plusSlide(-1));
     if (next) next.addEventListener("click", () => this.plusSlide(1));
 
-    setInterval(() => this.plusSlide(1), 3000);
+    this.container.addEventListener('mouseenter', () => this.pause());
+    this.container.addEventListener('mouseleave', () => this.resume());
+
+    this.resume();
   }
 
   plusSlide(n) {
@@ -23,6 +27,14 @@ class Slideshow {
       this.slides[i].classList.remove("active");
     }
     this.slides[n].classList.add("active");
+  }
+
+  pause() {
+    clearInterval(this.timer);
+  }
+
+  resume() {
+    this.timer = setInterval(() => this.plusSlide(1), 3000);
   }
 }
 
