@@ -4,6 +4,10 @@ class Slideshow {
     this.container = container;
     this.slides = container.getElementsByClassName("slide");
     this.index = 0;
+    
+    // Create slide indicators
+    this.createIndicators();
+    
     this.showSlide(this.index);
 
     const prev = container.querySelector(".prev");
@@ -11,19 +15,51 @@ class Slideshow {
     if (prev) prev.addEventListener("click", () => this.plusSlide(-1));
     if (next) next.addEventListener("click", () => this.plusSlide(1));
 
-    setInterval(() => this.plusSlide(1), 5000);
+    this.autoplayInterval = setInterval(() => this.plusSlide(1), 5000);
+  }
+
+  createIndicators() {
+    const indicatorsContainer = document.createElement('div');
+    indicatorsContainer.className = 'slide-indicators';
+    
+    for (let i = 0; i < this.slides.length; i++) {
+      const indicator = document.createElement('div');
+      indicator.className = 'slide-indicator';
+      if (i === 0) indicator.classList.add('active');
+      indicator.addEventListener('click', () => {
+        this.goToSlide(i);
+        // Reset autoplay timer
+        clearInterval(this.autoplayInterval);
+        this.autoplayInterval = setInterval(() => this.plusSlide(1), 5000);
+      });
+      indicatorsContainer.appendChild(indicator);
+    }
+    
+    this.container.appendChild(indicatorsContainer);
+    this.indicators = indicatorsContainer.getElementsByClassName('slide-indicator');
   }
 
   plusSlide(n) {
     this.index = (this.index + n + this.slides.length) % this.slides.length;
     this.showSlide(this.index);
   }
+  
+  goToSlide(n) {
+    this.index = n;
+    this.showSlide(this.index);
+  }
 
   showSlide(n) {
     for (let i = 0; i < this.slides.length; i++) {
       this.slides[i].classList.remove("active");
+      if (this.indicators && this.indicators[i]) {
+        this.indicators[i].classList.remove("active");
+      }
     }
     this.slides[n].classList.add("active");
+    if (this.indicators && this.indicators[n]) {
+      this.indicators[n].classList.add("active");
+    }
   }
 }
 

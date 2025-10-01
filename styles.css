@@ -227,6 +227,29 @@ body {
   .banner-text h3 {
     font-size: 1.4rem;
   }
+  
+  .topnav {
+    position: fixed;
+  }
+  
+  .topnav a {
+    padding: 18px 12px;
+    font-size: 15px;
+  }
+  
+  .logo {
+    height: 45px;
+  }
+  
+  .slideshow-container {
+    width: 100%;
+    max-width: 90vw;
+    height: 300px;
+  }
+  
+  .bots-row {
+    gap: 20px;
+  }
 }
 
 
@@ -452,16 +475,19 @@ body {
 }
 
 .mentors-title {
-      color: #e2b427; 
+      color: var(--primary-color); 
       text-align: center;
-                 font-style: italic;
+      font-style: italic;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
 }
 
 .contact-info {
   margin: 32px auto 0 auto;
-  color: #e2b427;
+  color: var(--primary-color);
   text-align: center;
   width: 100%;
+  font-size: 2rem;
 }
 .email {
   color: white;
@@ -475,15 +501,23 @@ body {
   .mentors {
     width: 100%;
     max-width: 350px;
-    border-radius: 5px;
+    border-radius: 12px;
     color: white;
-    margin: 25px ;
-    padding: 15px;
+    margin: 25px;
+    padding: 20px;
     box-sizing: border-box;
     position: static;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(145deg, rgba(30,30,30,0.9), rgba(20,20,20,0.9));
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.mentors:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(226, 180, 39, 0.2);
 }
 
 .mentors img {
@@ -518,16 +552,23 @@ body {
   .sponsor {
     width: 100%;
     max-width: 350px;
-    border-radius: 5px;
+    border-radius: 12px;
     color: white;
-    margin: 25px ;
-    padding: 15px;
+    margin: 25px;
+    padding: 20px;
     box-sizing: border-box;
     position: static;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(145deg, rgba(30,30,30,0.9), rgba(20,20,20,0.9));
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
 
+.sponsor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(226, 180, 39, 0.2);
 }
 
 .sponsor img {
@@ -661,6 +702,31 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
+.slide-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.slide-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.slide-indicator.active {
+  background: var(--primary-color);
+  width: 30px;
+  border-radius: 5px;
+}
+
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -742,8 +808,11 @@ body {
     background-image: url(images/img1.png);
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
-
+  padding: 60px 20px;
+  background-color: var(--bg-dark);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
 }
 
 
