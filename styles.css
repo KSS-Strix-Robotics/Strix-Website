@@ -189,7 +189,8 @@ body {
       font-family: "UbuntuR", sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+      max-width: 480px;
   }
 
   .content-box {
@@ -198,14 +199,8 @@ body {
     max-width: 480px;      
     padding: 28px 30px;
     margin-top: 12px;
-    /* background: linear-gradient(145deg, #1d2330, #151a24); */
-    /* border: 1px solid rgba(255,255,255,0.08); */
     border-radius: 18px;
-    box-shadow:
-      0 4px 10px -2px rgba(0,0,0,0.5),
-      0 0 0 1px rgba(255,255,255,0.04) inset;
-    color: #dde4ef;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.55;
     position: relative;
     overflow: hidden;
@@ -216,8 +211,6 @@ body {
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(circle at 85% 15%, rgba(255,255,255,0.10), transparent 60%),
-      radial-gradient(circle at 15% 85%, rgba(255,255,255,0.06), transparent 55%);
     pointer-events: none;
     mix-blend-mode: overlay;
   }
@@ -445,10 +438,12 @@ body {
 
 .slideshow-container {
   position: relative;
-  width: 250px;
-  height: 180px;
+  width: 450px;
+  height: 380px;
   overflow: hidden;
-  margin-left: 30px;
+  margin: 0;
+  flex-shrink: 0;
+  margin-top: 20px; /* Adjust this value to move it down */
 }
 
 .prev, .next {
@@ -517,11 +512,9 @@ body {
 
 .about-img2 {
     background-image: url(images/img1.png);
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    box-sizing: border-box;
-    padding: 40px ; 
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
 
 }
 
@@ -538,4 +531,13 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
   word-wrap: break-word;
+}
+
+.about-section {
+  display: flex;
+  align-items: center; /* This will vertically align the slideshow and text */
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 20px;
 }
