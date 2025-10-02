@@ -2,6 +2,7 @@
   color: #933de3;
   text-decoration: underline;
 }
+
 .bots-row {
   display: flex;
   gap: 32px;
@@ -9,6 +10,19 @@
   justify-content: center;
   align-items: flex-start;
 }
+
+@media (max-width: 768px) {
+  .bots-row {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bots-row {
+    gap: 15px;
+  }
+}
+
 .logo {
   position: absolute;
   left: 20px;
@@ -31,9 +45,16 @@ html, body {
   margin: 0;
   padding: 0;
 }
-body {
 
+body {
+    background-color: #0d0d0d;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    user-select: none;
 }
+
 .main {
   transition: margin-left .5s;
   padding: 20px;
@@ -51,18 +72,7 @@ body {
   }
 }
 
-body {
-    background-color: #0d0d0d;
-    color: white;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    user-select: none;
-}
-
-
 .topnav {
-  
   position: absolute;
   top: 0;
   width: 100%;
@@ -101,11 +111,6 @@ body {
 .topnav a.active {
   background-color: #e2b427;
   color: white;
-}
-
-.main {
-  transition: margin-left .5s;
-  padding: 20px;
 }
 
 .banner {
@@ -201,7 +206,28 @@ body {
   }
 }
 
-  .a {
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.a {
     background-color: #252525;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -210,8 +236,7 @@ body {
     padding: 40px 0; 
 }
 
-
-  .about {
+.about {
     background-color: #1a1a1a;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -265,7 +290,7 @@ body {
   }
 }
 
-  .about-text {
+.about-text {
     font-size: 18px;
     padding-bottom: 30px;
       overflow-wrap: break-word; 
@@ -292,7 +317,7 @@ body {
   }
 }
 
-  .about-robots {
+.about-robots {
     color: #e2b427;
     text-align: center;
     font-style: italic;
@@ -315,7 +340,7 @@ body {
   }
 }
 
-  .content-box {
+.content-box {
     box-sizing: border-box;
     width: 100%;
     max-width: 480px;      
@@ -378,7 +403,7 @@ body {
   }
 }
 
-  .bots {
+.bots {
     width: 100%;
     max-width: 350px;
     border-radius: 5px;
@@ -391,7 +416,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .bots img {
@@ -472,7 +496,7 @@ body {
   }
 }
 
-  .mentors {
+.mentors {
     width: 100%;
     max-width: 350px;
     border-radius: 5px;
@@ -526,7 +550,7 @@ body {
   }
 }
 
-  .sponsor {
+.sponsor {
     width: 100%;
     max-width: 350px;
     border-radius: 5px;
@@ -538,7 +562,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .sponsor img {
@@ -581,8 +604,6 @@ body {
   }
 }
 
-
-
 .FRC-img {
  max-width: 300px;
   border-radius: 8px;
@@ -612,7 +633,7 @@ body {
   }
 }
 
-  .FRC-text {
+.FRC-text {
   background-color: #2a2a2a; 
   padding: 5px;
   border-radius: 10px;
@@ -621,7 +642,7 @@ body {
   gap: 20px;
   font-size: 25px;
   text-align: justify;
-  }
+}
 
 @media (max-width: 768px) {
   .FRC-text {
@@ -660,8 +681,6 @@ body {
 
 /* why you looking in here */
 
-
-
 .slideshow-container {
   position: relative;
   width: 450px;
@@ -688,34 +707,6 @@ body {
   }
 }
 
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  background: rgba(0,0,0,0.5);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 18px;
-  user-select: none;
-}
-
-@media (max-width: 768px) {
-  .prev, .next {
-    padding: 10px 14px;
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .prev, .next {
-    padding: 8px 10px;
-    font-size: 16px;
-  }
-}
-
 .slide {
   position: absolute;
   width: 100%;
@@ -724,40 +715,61 @@ body {
   transition: opacity 0.7s ease;
   pointer-events: none;
 }
+
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Changed from 'cover' to prevent cropping */
+  object-fit: contain;
   border-radius: 10px;
 }
+
 .slide.active {
   opacity: 1;
   pointer-events: auto;
   z-index: 1;
 }
+
 .slide:first-child {
   display: block;
 }
+
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: auto;
-  margin-top: -22px;
-  padding: 10px;
+  z-index: 2;
+  background: rgba(0,0,0,0.5);
   color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  padding: 10px;
+  border-radius: 3px;
   cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  user-select: none;
+  transition: 0.6s ease;
 }
+
+@media (max-width: 768px) {
+  .prev, .next {
+    padding: 12px 14px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prev, .next {
+    padding: 10px 12px;
+    font-size: 18px;
+  }
+}
+
+.prev {
+  left: 0;
+}
+
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
-
-
 
 .about-img2 {
   background-color: #252525;
@@ -770,14 +782,12 @@ body {
   box-sizing: border-box;
 }
 
-
 .my-box {
   width: 300px;
   height: 150px;
   padding: 10px;
   overflow: auto; 
 }
-
 
 .my-box p {
   font-family: Arial, sans-serif;
