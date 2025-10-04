@@ -41,3 +41,27 @@ class Slideshow {
 document.querySelectorAll('.slideshow-container').forEach(container => {
   new Slideshow(container);
 });
+
+
+let backToTopButton = document.getElementById("backToTopBtn");
+
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (backToTopButton) { 
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backToTopButton.classList.add("show");
+    } else {
+      backToTopButton.classList.remove("show");
+    }
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
