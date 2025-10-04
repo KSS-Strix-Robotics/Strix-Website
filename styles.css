@@ -2,7 +2,6 @@
   color: #933de3;
   text-decoration: underline;
 }
-
 .bots-row {
   display: flex;
   gap: 32px;
@@ -10,19 +9,6 @@
   justify-content: center;
   align-items: flex-start;
 }
-
-@media (max-width: 768px) {
-  .bots-row {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .bots-row {
-    gap: 15px;
-  }
-}
-
 .logo {
   position: absolute;
   left: 20px;
@@ -44,18 +30,10 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
-
 body {
-    background-color: #0d0d0d;
-    color: white;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    user-select: none;
-}
 
+}
 .main {
   transition: margin-left .5s;
   padding: 20px;
@@ -73,7 +51,18 @@ body {
   }
 }
 
+body {
+    background-color: #0d0d0d;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    user-select: none;
+}
+
+
 .topnav {
+  
   position: absolute;
   top: 0;
   width: 100%;
@@ -114,6 +103,11 @@ body {
   color: white;
 }
 
+.main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
 .banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/Capture.PNG");
   height: 40vh;
@@ -121,7 +115,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  width: 100%; /* Changed from 100vw */
+  width: 100vw;
   max-width: 100vw;
   top: 0;
   left: 0;
@@ -207,39 +201,19 @@ body {
   }
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    color: white;
-}
-
-@media (max-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
-
-.a {
+  .a {
     background-color: #252525;
-    width: 100%; /* Changed from 100vw */
+    width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     box-sizing: border-box;
     padding: 40px 0; 
 }
 
-.about {
+
+  .about {
     background-color: #1a1a1a;
-    width: 100%; /* Changed from 100vw */
+    width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     box-sizing: border-box;
@@ -291,7 +265,7 @@ body {
   }
 }
 
-.about-text {
+  .about-text {
     font-size: 18px;
     padding-bottom: 30px;
       overflow-wrap: break-word; 
@@ -318,7 +292,7 @@ body {
   }
 }
 
-.about-robots {
+  .about-robots {
     color: #e2b427;
     text-align: center;
     font-style: italic;
@@ -341,10 +315,10 @@ body {
   }
 }
 
-.content-box {
+  .content-box {
     box-sizing: border-box;
     width: 100%;
-    max-width: px;      
+    max-width: 480px;      
     padding: 28px 30px;
     margin-top: 12px;
     border-radius: 18px;
@@ -360,6 +334,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
     pointer-events: none;
     mix-blend-mode: overlay;
   }
@@ -403,7 +378,7 @@ body {
   }
 }
 
-.bots {
+  .bots {
     width: 100%;
     max-width: 350px;
     border-radius: 5px;
@@ -416,6 +391,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .bots img {
@@ -496,7 +472,7 @@ body {
   }
 }
 
-.mentors {
+  .mentors {
     width: 100%;
     max-width: 350px;
     border-radius: 5px;
@@ -550,7 +526,7 @@ body {
   }
 }
 
-.sponsor {
+  .sponsor {
     width: 100%;
     max-width: 350px;
     border-radius: 5px;
@@ -562,6 +538,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .sponsor img {
@@ -604,6 +581,8 @@ body {
   }
 }
 
+
+
 .FRC-img {
  max-width: 300px;
   border-radius: 8px;
@@ -633,7 +612,7 @@ body {
   }
 }
 
-.FRC-text {
+  .FRC-text {
   background-color: #2a2a2a; 
   padding: 5px;
   border-radius: 10px;
@@ -642,9 +621,8 @@ body {
   gap: 20px;
   font-size: 25px;
   text-align: justify;
-}
+  }
 
-<<<<<<< Updated upstream
 @media (max-width: 768px) {
   .FRC-text {
     flex-direction: column;
@@ -661,15 +639,6 @@ body {
     padding: 10px;
     gap: 10px;
   }
-=======
-  .FRC {
-    background-color: #1a1a1a;
-    width: 100%; /* Changed from 100vw */
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    box-sizing: border-box;
-    padding: 40px 0; 
->>>>>>> Stashed changes
 }
 
 .video {
@@ -691,6 +660,8 @@ body {
 
 /* why you looking in here */
 
+
+
 .slideshow-container {
   position: relative;
   width: 450px;
@@ -698,7 +669,6 @@ body {
   overflow: hidden;
   margin: 0;
   flex-shrink: 0;
-<<<<<<< Updated upstream
   margin-top: 20px;
 }
 
@@ -718,35 +688,6 @@ body {
   }
 }
 
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.7s ease;
-  pointer-events: none;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-.slide.active {
-  opacity: 1;
-  pointer-events: auto;
-  z-index: 1;
-}
-
-.slide:first-child {
-  display: block;
-=======
-  margin-top: 20px; 
->>>>>>> Stashed changes
-}
-
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -754,38 +695,27 @@ body {
   z-index: 2;
   background: rgba(0,0,0,0.5);
   color: white;
-  padding: 10px;
+  padding: 8px 12px;
   border-radius: 3px;
   cursor: pointer;
   font-size: 18px;
-  font-weight: bold;
   user-select: none;
-  transition: 0.6s ease;
 }
 
 @media (max-width: 768px) {
   .prev, .next {
-    padding: 12px 14px;
+    padding: 10px 14px;
     font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .prev, .next {
-    padding: 10px 12px;
-    font-size: 18px;
+    padding: 8px 10px;
+    font-size: 16px;
   }
 }
 
-.prev {
-  left: 0;
-}
-
-.next {
-<<<<<<< Updated upstream
-=======
-  right: 10px;
-}
 .slide {
   position: absolute;
   width: 100%;
@@ -797,7 +727,7 @@ body {
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain; 
+  object-fit: contain; /* Changed from 'cover' to prevent cropping */
   border-radius: 10px;
 }
 .slide.active {
@@ -823,20 +753,23 @@ body {
   cursor: pointer;
 }
 .next {
->>>>>>> Stashed changes
   right: 0;
+  border-radius: 3px 0 0 3px;
 }
+
+
 
 .about-img2 {
   background-color: #252525;
   display: flex;
   justify-content: center;
   padding: 40px 20px;
-  width: 100%; /* Changed from 100vw */
+  width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   box-sizing: border-box;
 }
+
 
 .my-box {
   width: 300px;
@@ -844,6 +777,7 @@ body {
   padding: 10px;
   overflow: auto; 
 }
+
 
 .my-box p {
   font-family: Arial, sans-serif;
@@ -873,6 +807,5 @@ body {
     padding: 10px;
   }
 }
-
 
 
