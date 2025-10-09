@@ -487,13 +487,17 @@ body {
 }
 
 .mentors img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px auto;
-    border-radius: 5px;
-}
+
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+} 
+
 
 @media (max-width: 600px) {
   .mentors {
@@ -884,4 +888,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;  
+}
+
+.role {
+  color: #e2b427;
+  font-size: 30px;
 }
