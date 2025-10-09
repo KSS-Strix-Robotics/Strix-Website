@@ -585,7 +585,14 @@ body {
   }
 }
 
-
+.FRC {
+    background-color: #1a1a1a;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    box-sizing: border-box;
+    padding: 40px 0; 
+}
 
 .FRC-img {
  max-width: 300px;
@@ -798,6 +805,28 @@ body {
   padding: 20px;
 }
 
+.donate-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.donate-title {
+  color: #e2b427;
+  text-align: center;
+  font-style: italic;
+  font-size: 32px;
+  margin: 0 0 20px 0;
+}
+
+.donate-text .content-box {
+  margin: 0 auto;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .about-section {
     gap: 20px;
@@ -894,3 +923,36 @@ body {
   color: #e2b427;
   font-size: 30px;
 }
+
+.donate-title {
+      color: #e2b427; 
+      text-align: center;
+      font-style: italic;
+      opacity: 1;
+      margin: auto;
+}
+
+@media (max-width: 768px) {
+  .donate-title {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .donate-title {
+    font-size: 1.2em;
+  }
+}
+
+  .donate-text {
+    font-size: 18px;
+    padding-bottom: 30px;
+      overflow-wrap: break-word; 
+      opacity: 1;
+      font-family: "UbuntuR", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 480px;
+      text-align: center;
+  }
