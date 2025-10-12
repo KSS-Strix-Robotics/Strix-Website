@@ -38,7 +38,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-      </head>
+
+      <!-- Snow Effect From TobyCM -->
+      <link rel="stylesheet" href="https://tobycm.github.io/easy-snow/snow.css" />
+      <script>
+        const now = new Date();
+        document.christmas = now.getMonth() > 10 || now.getMonth() < 3;
+      </script>
+      <script src="https://tobycm.github.io/easy-snow/snow.js"></script>
+</head>
 
 <body>
 <div class="topnav">
@@ -183,6 +191,7 @@ communication, and leadership.
 </div>
 
 <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+
 
 <script src="js.js"></script>
 </body>
