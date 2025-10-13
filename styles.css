@@ -31,9 +31,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
-body {
 
-}
 .main {
   transition: margin-left .5s;
   padding: 20px;
@@ -63,11 +61,14 @@ body {
 
 .topnav {
   
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   overflow: hidden;
+  background: rgba(24, 23, 23, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .topnav a {
@@ -316,6 +317,7 @@ body {
 }
 
   .content-box {
+    background-color: #0d0d0d;
     box-sizing: border-box;
     width: 100%;
     max-width: 480px;      
@@ -327,7 +329,9 @@ body {
     position: relative;
     overflow: hidden;
       font-family: "Nunito Sans", sans-serif;
-
+    border-style: solid;
+    border-color: #e2b427;
+    border-width: thin;
   }
   
   .content-box::before {
