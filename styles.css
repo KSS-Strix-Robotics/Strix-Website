@@ -150,8 +150,6 @@ body {
   color: white;
   margin: 0;
   padding: 0;
-  font-size: xx-large;
-  font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -982,4 +980,3 @@ body {
       max-width: 480px;
       text-align: center;
   }
-
