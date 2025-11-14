@@ -415,7 +415,7 @@ body {
 .bots img {
     width: 100%;
     max-width: 200px;
-    height: auto;
+    height: 200px;
     display: block;
     margin: 0 auto 10px auto;
     border-radius: 5px;
