@@ -435,11 +435,6 @@ body {
   border-radius: 5px;
 }
 
-.bot-2026 img {
-  width: 200px;
-  height: 200px;
-}
-
 @media (max-width: 600px) {
   .bots {
     max-width: 95vw;
