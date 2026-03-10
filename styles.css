@@ -427,12 +427,13 @@ body {
 }
 
 .bots img {
-    width: 100%;
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin: 0 auto 10px auto;
-    border-radius: 5px;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 5px;
+  object-fit: contain;
 }
 
 @media (max-width: 600px) {
